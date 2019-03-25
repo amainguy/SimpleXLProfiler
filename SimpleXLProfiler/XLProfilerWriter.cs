@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.IO;
 using ClosedXML.Excel;
 
@@ -10,7 +11,7 @@ namespace SimpleXLProfiler
 
         public static XLProfilerWriter Instance { get { return lazy.Value; } }
 
-        private const string WorksheetTitle = "Résultats du profilage";
+        private const string WorksheetTitle = "Profiling results";
         private const string FilePath = "C:\\profile\\profileResult.xlsx";
 
         private int _row;
