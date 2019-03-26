@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Configuration;
 using System.IO;
 using ClosedXML.Excel;
 
 namespace SimpleXLProfiler
 {
-    public class XLProfilerWriter : IDisposable
+    public class XLProfilerWriter : IXLProfilerWriter
     {
         private static readonly Lazy<XLProfilerWriter> lazy = new Lazy<XLProfilerWriter>(() => new XLProfilerWriter());
 
-        public static XLProfilerWriter Instance { get { return lazy.Value; } }
+        public static IXLProfilerWriter Instance { get { return lazy.Value; } }
 
         private const string WorksheetTitle = "Profiling results";
         private const string FilePath = "C:\\profile\\profileResult.xlsx";
@@ -17,7 +16,6 @@ namespace SimpleXLProfiler
         private int _row;
         private IXLWorkbook _workBook;
         private IXLWorksheet _workSheet;
-        private XLProfilerLog _profilerLog;
 
         private XLProfilerWriter()
         {
