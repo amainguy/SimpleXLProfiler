@@ -9,7 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release</releaseNotes>
-    <license type="file">license.txt</license>
+    <license type="expression">Apache-2.0</license>
     <copyright>Copyright 2019</copyright>
     <tags></tags>
   </metadata>
