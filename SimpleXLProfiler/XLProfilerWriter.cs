@@ -15,7 +15,7 @@ namespace SimpleXLProfiler
         private const string FilePath = "C:\\profile\\profileResult.xlsx";
 
         private int _row;
-        private XLWorkbook _workBook;
+        private IXLWorkbook _workBook;
         private IXLWorksheet _workSheet;
         private XLProfilerLog _profilerLog;
 
@@ -27,14 +27,9 @@ namespace SimpleXLProfiler
             CreateHeaderWithStyle();
         }
 
-        public void StartProfiling(string description, int column = 1)
+        public IXLProfilerLog StartProfiling(string description, int column = 1)
         {
-            _profilerLog = new XLProfilerLog(description, this, column);
-        }
-
-        public void StopProfiling()
-        {
-            _profilerLog.Dispose();
+            return new XLProfilerLog(description, this, column);
         }
 
         internal IXLWorksheet GetWorksheet()

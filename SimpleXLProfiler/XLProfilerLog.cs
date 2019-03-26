@@ -4,7 +4,7 @@ using ClosedXML.Excel;
 
 namespace SimpleXLProfiler
 {
-    internal sealed class XLProfilerLog : IDisposable
+    public class XLProfilerLog :  IXLProfilerLog
     {
         private readonly Stopwatch _timeTracker = new Stopwatch();
         private readonly IXLWorksheet _workSheet;
@@ -21,7 +21,7 @@ namespace SimpleXLProfiler
             _timeTracker.Start();
         }
 
-        private void LogToXL()
+        public void LogToXL()
         {
             _timeTracker.Stop();
             _workSheet.Cell(_row, _column).SetValue(_description);
