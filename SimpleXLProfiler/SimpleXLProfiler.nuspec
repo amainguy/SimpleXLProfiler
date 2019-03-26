@@ -9,6 +9,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>Initial release</releaseNotes>
+    <license type="file">license.txt</license>
     <copyright>Copyright 2019</copyright>
     <tags></tags>
   </metadata>
