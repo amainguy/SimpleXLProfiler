@@ -11,7 +11,7 @@ namespace SimpleXLProfiler
         private readonly int _row;
         private readonly int _column;
 
-        public XLProfilerLog(string description, XLProfilerWriter profiler, int column)
+        internal XLProfilerLog(string description, IInternalXLHandler profiler, int column)
         {
             _workSheet = profiler.GetWorksheet();
             _row = profiler.GetRow();
