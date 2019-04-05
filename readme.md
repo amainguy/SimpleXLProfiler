@@ -3,7 +3,7 @@
 ## What is SimpleXLProfiler for?
 
 It is a very lightweight tool that produces an excel file while monitoring 
-pieces of code associated with a description.  It's basically a wrapper on `System.Diagnostic.Stopwatch` who write results using [`ClosedXML`](https://github.com/ClosedXML/ClosedXML). If you want to learn further more, take a look at the source code.
+pieces of code associated with a description.  It's basically a wrapper on `System.Diagnostic.Stopwatch` who write results using [`ClosedXML`](https://github.com/ClosedXML/ClosedXML). If you want to learn further more, take a look at the [source code](https://github.com/amainguy/SimpleXLProfiler/tree/master/SimpleXLProfiler).
 
 ## Install SimpleXLProfiler via NuGet
 
